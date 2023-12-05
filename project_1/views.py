@@ -7,11 +7,11 @@ from rest_framework import status
 
 @api_view(["GET", "POST"])
 def func_books_with_id(request, id, format = None):
-    try:
-        book_with_id = Book.objects.get(pk = id)
-    except Book.DoesNotExist:
-        return Response(status = status.HTTP_404_NOT_FOUND)
     if request.method == "GET":
+        try:
+            book_with_id = Book.objects.get(pk = id)
+        except Book.DoesNotExist:
+            return Response(status = status.HTTP_404_NOT_FOUND)
         serializer = Myserializer(book_with_id)
         return Response(serializer.data)
     elif request.method == "POST":
