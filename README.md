@@ -4,6 +4,10 @@ Simple CRUD based Django API using rest framework.
 
 Two models(User and Book) have been created and simple HTTP methods have been implemented both if an ID is given and if not.
 
+It supports the following endpoints:
+
+![image](https://github.com/The-Honoured-One/Django_restapi/assets/152301760/55360457-1285-494d-8573-10241b3eab4c)
+
 Some sample functionality is shown below :-
 
 GET request for all books:
